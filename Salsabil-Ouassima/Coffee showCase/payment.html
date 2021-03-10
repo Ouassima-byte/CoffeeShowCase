@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="payement.css">
+        <title></title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Poiret+One&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/c503b43114.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        <header >
+            <div class="menuIcon" onclick="toggleMenu();"></div>
+           <ul class="navigation">
+               <li><a href="index.html#about">About</a></li>
+               <li><a href="#index.html#services">Services</a></li>
+               <li><a href="index.html#home">Home</a></li>
+               <li><a href="#logo"> <img src="./images/logo3.png" alt=""> </a></li>
+               <li><a href="index.html#gallery">Gallery</a></li>
+               <li><a href="index.html#contact">Contact</a></li>
+               <li><a href="#shop">Shop</a></li>
+           </ul>
+        </header>
+        <SEction id="body">
+        <div class="container" >
+            <div class="title">Billing Address & Payment</div>
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text"  required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">E-mail</span>
+                        <input type="text"  required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Address</span>
+                        <input type="text"  required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">City</span>
+                        <input type="text" required>
+                    </div>
+                    <!-- <div class="title">Payment</div> -->
+                    <div class="input-box">
+                        <span class="details">Credit card number</span>
+                        <input type="text"  required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Name on card</span>
+                        <input type="text"  required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Credit card</span>
+                        <input type="text"  required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Accepted cards<img src="./images/cards.png" alt="" class="cards"></span>
+                        <!-- <input type="text"  required> -->
+                    </div>
+
+                </div>
+                <div class="button">
+                    <input type="submit" value="Shop">
+
+                </div>
+            </form>
+        </div>
+    </SEction>
+    <footer class="footer">
+        <ul class="navigation">
+            <li><a href="#">Copyright &#169 2021 OuSal coffee</a></li>
+            <li><a href="#"><img src="./images/logo3.png" alt="" ></a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet consectet</a></li>
+        </ul>
+        
+        
+    </footer>
+      
+
+
+
+
+
+
+
+        <script type="text/javascript">
+            window.addEventListener('scroll',function(){
+                var h =document.querySelector('header');
+                h.classList.toggle('sticky' , window.scrollY > 0);
+            });
+
+
+
+            function toggleMenu(){
+                const mt = document.querySelector('.menuIcon');
+                const ng = document.querySelector('.navigation');
+                mt.classList.toggle('active');
+                ng.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>

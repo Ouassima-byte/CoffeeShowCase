@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 1000px;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./images/bg1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.banner h1{
+    color: #FFFFFF;
+    font-size: 100px;
+    font-weight: 300;
+    transition: 0.5s;
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    margin-top: 10%;
+}
+.banner p{
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    margin-top: 1%;
+}
+.btn{
+    font-size: 0.8em;
+    color: #fff;
+    background-image: linear-gradient(to left, #0F182B , #38425B);
+    display: inline-block;
+    padding:10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-top: 5%;
+}
+.btn:hover{
+    letter-spacing: 6px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky{
+    background-image: linear-gradient(to left, #0F182B , #38425B);
+    padding: 1px 100px;
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+}
+header .navigation li{
+    list-style-type: none;
+    margin-left: 70px;
+}
+header .navigation li a{
+    text-decoration: none;
+    font-weight: 300;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header .navigation li a img{
+    width: 160px;
+    height: 110px;
+}
+
+header .navigation li a:hover{
+    color:#7486B6 ;
+}
+
+@media (max-width:991px)
+{
+    header,
+    header.sticky{
+        padding: 10px 20px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #0F182B;
+    }
+    header .navigation li{
+        margin-left: 0;
+    }
+    header .navigation li a{
+        color: #fff;
+        font-size: 1.6em;
+    }
+    .menuIcon{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(./images/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menuIcon.active{
+        background: url(./images/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .banner h1{
+        color: #FFFFFF;
+        font-size: 60px;
+        margin-top: 10%;
+        margin-left: 3%;
+        text-align: center;
+    }
+   
+}
+.socialMedia {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    padding: 20px;
+}
+.socialMedia ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.socialMedia ul li a i{
+    color: #FFFFFF;
+    font-size: 13px;
+    transition: 0.5s;
+    padding-top: 5px;
+}
+.verticalLine{
+    height: 70px;
+    background: #fff;
+    width: 1px;
+    margin: 6px;
+    transition: 0.5s;
+}
+.socialMedia ul li a i.color-Echange  {
+    color: #0F182B;
+    transition: 0.5s;
+}
+.verticalLine.color{
+    background: #0F182B;
+    height: 100px;
+    transition: 0.5s;
+}
+.fa-pinterest-p.second{
+    color: #0F182B;
+    transition: 0.5s;
+}
+.fa-facebook-f.third{
+    color: #0F182B;
+    transition: 0.5s;
+}
+.fa-heart.forth{
+    color: #0F182B;
+    transition: 0.5s;
+}
+.services{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.services h1{
+    font-size: 60px;
+    color: #0F182B;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    margin-top: 5%;
+    margin-bottom: -5%;
+}
+.services ul{
+    display: flex;
+    list-style-type: none;
+    margin: 50px;
+}
+.services ul li .cyrcle{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-image: linear-gradient(to left, #0F182B , #38425B);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    margin-left: 23%;
+}
+.services ul li .cyrcle i{
+    font-size: 50px;
+    color: #fff;
+    margin-top: 30%;
+}
+.services ul li{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+.services ul li p{
+    font-size:15px;
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+}
+.services ul li h4{
+    margin-bottom: 2%;
+}
+@media (max-width:991px){
+    .services ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .partners ul li{
+        flex-direction: column;
+        width: 100px;
+    }
+    .partners p{
+        width: 300px;
+    }
+    .partners p{
+       padding-left: 30%;
+        text-align: center;
+    }
+    .gallery ul {
+        flex-direction: column;
+    }
+    .gallery ul li .prod1 ,
+    .gallery ul li .prod2 ,
+    .gallery ul li .prod3 ,
+    .gallery ul li .prod4 {
+        margin-left: 22%;
+    }
+}
+.partners{
+    width: 100%;
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./images/business-handshake-of-two-men-demonstrating-their-agreement-to-sign-agreement-or-contract-between-their-firms-companies-enterprises.jpg');
+    padding-bottom: 7%;
+    color: #fff;
+}
+.partners h1{
+    padding-top: 5%;
+    font-size: 60px;
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    font-weight: lighter;
+    padding-bottom: 1%;
+    text-align: center;
+}
+.partners p{
+    text-transform: lowercase;
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    color: #bdc2ce;
+    text-align: center;
+}
+.partners ul {
+    margin-top: 3%;
+    margin-left:25% ;
+}
+.partners ul li{
+    display: flex;
+}
+ul {
+    list-style-type: none;
+}
+.partners ul li  .brand{
+    width: 210px;
+    height: 255px;
+    background-image: url(./images/b1.png);
+    background-position: center;
+    background-size: cover;
+    margin: 20px;
+    margin-right: 10%;
+}
+.partners ul li .brandText{
+    width: 30%;
+    margin-top: 3%;
+}
+.partners ul li .brandText h3{
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 2%;
+}
+.partners ul li .brandText p{
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    text-align: left;
+}
+.partners ul li .brandText a{
+    font-size: 0.8em;
+    color: #fff;
+    background-image: linear-gradient(to left, #0F182B , #38425B);
+    display: inline-block;
+    padding:10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-top: 5%;
+}
+.partners ul li  .brand1{
+    width: 210px;
+    height: 210px;
+    background-image: url(./images/b2.png);
+    background-position: center;
+    background-size: cover;
+    margin: 20px;
+    margin-right: 5%;
+    margin-left: 8%;
+}
+.partners ul li .brandText1{
+    width: 30%;
+    margin-top: 3%;
+}
+.partners ul li .brandText1 h3{
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 2%;
+    text-align: right;
+}
+.partners ul li .brandText1 p{
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    text-align: right;
+}
+.partners ul li .brandText1 a{
+    font-size: 0.8em;
+    color: #fff;
+    background-image: linear-gradient(to left, #0F182B , #38425B);
+    display: inline-block;
+    padding:10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-top: 5%;
+    margin-left: 45%;
+}
+.partners ul li  .brand2{
+    width: 350px;
+    height: 130px;
+    background-image: url(./images/b3.png);
+    background-position: center;
+    background-size: cover;
+    margin: 20px;
+    margin-right: 5%;
+    margin-left: -6%;
+}
+.gallery{
+    width: 100%;
+    text-align: center;
+}
+.gallery p,
+.gallery h1{
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+}
+.gallery h1{
+    font-size: 60px;
+}
+.gallery p{
+    font-size: 20px;
+    margin-top: 5%;
+}
+.gallery ul{
+    display: flex;
+    list-style-type: none;
+    margin: 2%;
+}
+.gallery ul li{
+    border: 20px solid #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* width: 19.2%; */
+    margin: 30px;
+}
+.gallery ul li .prod1{
+    background-image: url('./images/p1.png');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+.gallery ul li .prod1:hover{
+    width: 220px;
+    height: 220px;
+}
+.prod2{
+    background-image: url('./images/p2.png');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+.prod3{
+    background-image: url('./images/p3.png');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+.prod4{
+    background-image: url('./images/p4.png');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+.prod1:hover ,
+.prod2:hover ,
+.prod3:hover ,
+.prod4:hover{
+    width: 220px;
+    height: 220px;
+    transition: 0.5s;
+}
+.gallery ul li a{
+    background-image: linear-gradient(to left, #3C321E, #B5985A);;
+}
+.gallery ul li h3{
+    padding-top: 3%;
+}
+.gallery ul li h4{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.gallery a{
+    margin-top: -0%;
+    margin-bottom: 4%;
+    background-image: linear-gradient(to left, #0F182B, #B5985A);;
+}
+.process{
+    width: 100%;
+    background-image: url("./images/process1.PNG");
+    background-size: cover;
+    height: 400px;
+}
+.middle{
+    color: #FFFFFF;
+}
+.middle p,
+.middle h1{
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+}
+.middle h1{
+    font-size: 55px;
+    padding-top: 8.5%;
+}
+.middle p{
+    width: 500px;
+    margin-left: 30.5%;
+    margin-top: 1%;
+}
+.process{
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./images/process1.PNG');
+    background-size: cover;
+    transition: 0.5s;
+    text-align: center;
+}
+@media (max-width:991px){
+    .middle p{
+        margin-left: -1%;
+    }
+    .middle h1{
+        padding-top: 25%;
+    }
+    .about .rightside h1 span{
+        font-size: 60px;
+        font-family: 'Cinzel', serif;
+        font-family: 'Poiret One', cursive;
+        color: #fff;
+    }
+    
+}
+.about{
+    width: 100%;
+    display: flex;
+    background-image: url('./images/about4.PNG');
+    background-size: cover;
+    flex-direction: column;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.about .leftside h1{
+   text-align: center;
+   font-size: 60px;
+   font-family: 'Cinzel', serif;
+   font-family: 'Poiret One', cursive;
+   margin-top: -5%;
+}
+
+.about .leftside p{
+    width: 46%;
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    text-align: right;
+    padding-left: 10%;
+    padding-top: 1%;
+}
+.about .rightside{
+    margin-top: 7%;
+}
+.about .rightside h1{
+    float: right;
+    font-size: 60px;
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    margin-right: 25%;
+}
+.about .rightside h1 span{
+    font-size: 60px;
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+}
+.about .rightside p{
+    float: right;
+    width: 46%;
+    font-family: 'Cinzel', serif;
+    font-family: 'Poiret One', cursive;
+    text-align: right;
+    margin-top: 15%;
+    margin-right: 55%;
+    width: 40%;
+    margin-bottom: -3%;
+}
+.about .rightside a{
+    font-size: 0.8em;
+    color: #fff;
+    background-image: linear-gradient(to left, #0F182B , #38425B);
+    display: inline-block;
+    padding:10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 32.5%;
+    margin-top: 5%;
+}
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./images/business-handshake-of-two-men-demonstrating-their-agreement-to-sign-agreement-or-contract-between-their-firms-companies-enterprises.jpg');
+ }
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.contact .content p{
+    font-weight: 300;
+    color: #ffffff;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .contactInfo .box .icon i{
+    color: #0F182B;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #ffffff;
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #ffffff;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #0F182B;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: #ac2020;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background-image: linear-gradient(to left, #0F182B , #38425B);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactForm{
+        width: 100%;
+    }
+    footer .navigation{
+        display: flex;
+        flex-direction: column;
+        margin-left: -10%;
+    }
+}
+footer .navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .navigation li{
+    list-style-type: none;
+    margin-left: 70px;
+}
+footer .navigation li a{
+    text-decoration: none;
+    font-weight: 300;
+    color: #0F182B;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+footer .navigation li a img{
+    width: 160px;
+    height: 110px;
+    
+}
